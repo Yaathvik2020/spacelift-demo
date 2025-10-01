@@ -44,7 +44,7 @@ locals {
 }
 
 resource "aws_key_pair" "ssh_key" {
-  key_name   = "88chinna"
+  key_name   = "ec2_k"
   public_key = file(var.public_key)
 }
 
