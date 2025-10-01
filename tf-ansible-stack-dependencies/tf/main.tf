@@ -19,6 +19,10 @@ data "aws_ami" "ubuntu" {
     name   = "architecture"
     values = ["x86_64"]
   }
+  filter {
+    name   = " security_group_ids"
+    values = ["sg-09aa62fb79bbd1583"]
+  }
   owners = ["099720109477"] #canonical
 }
 
@@ -44,7 +48,7 @@ locals {
 }
 
 resource "aws_key_pair" "ssh_key" {
-  key_name   = "ec2"
+  key_name   = "88chinna"
   public_key = file(var.public_key)
 }
 
