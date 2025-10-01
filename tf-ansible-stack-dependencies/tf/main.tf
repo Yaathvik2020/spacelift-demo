@@ -20,7 +20,7 @@ data "aws_ami" "ubuntu" {
     values = ["x86_64"]
   }
   filter {
-    name   = " security_group_ids"
+    name   = "security_group_ids"
     values = ["sg-0c55da1eedee13c33"]
   }
   owners = ["099720109477"] #canonical
